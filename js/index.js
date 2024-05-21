@@ -27,6 +27,7 @@ const changeActiveItem = () => {
 
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
+    changeActiveItem()
     item.classList.add("active");
     if (item.id != "notifications") {
       document.querySelector(".notifications-popup").style.display = "none";
